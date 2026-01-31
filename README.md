@@ -14,7 +14,7 @@ Este projeto permite buscar um usuário do GitHub e visualizar:
 - 👤 informações do perfil
 - 📦 repositórios públicos  
 
-Tudo isso em uma interface **clean**, **moderna** e com uma paleta **rosa & pêssego** 🌸🍑
+Tudo isso em uma interface **clean**, **moderna*🌸
 
 ---
 
