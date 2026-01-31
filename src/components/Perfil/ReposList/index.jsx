@@ -21,7 +21,7 @@ const ReposList = ({ nomeUsuario }) => {
                 setTimeout(() => {
                     setEstaCarregando(false);
                     setRepos(resJson);
-                }, 4000);
+                }, 3000);
             })
             .catch(erro => {
                 setEstaCarregando(false);

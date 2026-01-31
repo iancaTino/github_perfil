@@ -1,16 +1,58 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌸 Buscador de Perfil do GitHub
 
-Currently, two official plugins are available:
+✨ Encontre perfis e repositórios do GitHub de forma simples, rápida e estilosa ✨  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💡 Sobre o projeto
 
-## Expanding the ESLint configuration
+Este projeto permite buscar um usuário do GitHub e visualizar:
+- 👤 informações do perfil
+- 📦 repositórios públicos  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tudo isso em uma interface **clean**, **moderna** e com uma paleta **rosa & pêssego** 🌸🍑
+
+---
+
+## 🖥️ Preview
+
+> 🔗 Acesse o projeto online  
+👉 **[Clique aqui para acessar](COLOQUE_AQUI_SEU_LINK)**
+
+---
+
+## ✨ Funcionalidades
+
+- 🔍 Busca de usuários do GitHub  
+- 📄 Exibição de perfil
+- 📦 Listagem de repositórios
+- 🎨 Interface estilizada
+- 📱 Layout responsivo
+
+---
+
+## 🛠️ Tecnologias
+
+<div align="center">
+
+⚛️ React &nbsp;|&nbsp;
+🧠 JavaScript &nbsp;|&nbsp;
+🎨 CSS Modules &nbsp;|&nbsp;
+🌐 GitHub API
+
+</div>
+
+---
+
+## 🌱 O que aprendi com esse projeto
+
+- Consumo de APIs externas
+- Uso de React Hooks (`useState` e `useEffect`)
+- Organização de componentes
+- Tratamento de erros
+- Estilização com foco em UI/UX
+

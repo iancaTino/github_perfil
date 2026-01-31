@@ -1,26 +1,67 @@
-.list{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-}
-
-.listItem{
+.list {
     list-style: none;
-    padding: 16px;
-    border: 1px solid rgba(0, 0, 0, 0, 0.1);
+    padding: 0;
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
-.ItemName b, .itemLanguage b{
-    margin-right: 8px;
+.listItem {
+    background: var(--corCard);
+    border-radius: 12px;
+    padding: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    border: 1px solid var(--corPrincipal);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.itemLink{
-    display: block;
-    background-color: var(--corPrincipal);
-    color: var(--corSecundaria);
-    text-align: center;
-    font-weight: bold;
-    margin-top: 8px;
-    padding: 8px;
+.listItem:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(255, 159, 138, 0.35);
+}
+
+.itemName {
+    font-size: 1.1rem;
+    color: var(--corTexto);
+}
+
+.itemName b {
+    color: var(--corDestaque);
+    margin-right: 6px;
+}
+
+.itemLanguage {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.itemLanguage b {
+    color: var(--corDestaque);
+    margin-right: 6px;
+}
+
+.itemLink {
+    margin-top: auto;
+
     text-decoration: none;
+    text-align: center;
+
+    background: var(--corDestaque);
+    color: var(--corTexto);
+    padding: 0.6rem;
+    border-radius: 8px;
+
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.itemLink:hover {
+    background: var(--corPrincipal);
+    transform: scale(1.05);
 }

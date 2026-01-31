@@ -13,5 +13,86 @@
 
 :root {
     --corPrincipal: rgb(255, 212, 219);
-    --corSecundaria: #111;
+    --corSecundaria: #f7f7f7;
+    --corDestaque: #ff9f8a;
+    --corTexto: #222;
+    --corCard: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--corSecundaria);
+    color: var(--corTexto);
+}
+
+.app {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--corTexto);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* SEARCH */
+.search {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 3rem;
+}
+
+.search input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+
+    border-radius: 14px;
+    border: 2px solid var(--corPrincipal);
+
+    background: var(--corCard);
+    color: var(--corTexto);
+
+    font-size: 1rem;
+    outline: none;
+
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search input::placeholder {
+    color: #aaa;
+}
+
+.search input:focus {
+    border-color: var(--corDestaque);
+    box-shadow: 0 0 0 4px rgba(255, 159, 138, 0.25);
+}
+
+/* CONTEÚDO */
+.content {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+:root {
+    --corPrincipal: rgb(255, 212, 219);
+    --corSecundaria: #f7f7f7;
+    --corDestaque: #ff9f8a;
+    --corTexto: #222;
+    --corCard: #fff;
 }
