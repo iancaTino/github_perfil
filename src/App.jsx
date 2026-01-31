@@ -17,11 +17,11 @@ function App() {
           type="text"
           placeholder="ex: iancaTino"
           value={nomeUsuario}
-          onChange={(e) => setNomeUsuario(e.target.value)}
+          onChange={(e) => setNomeUsuario(e.target.value.trim())}
         />
       </div>
 
-      {nomeUsuario.length > 4 && (
+      {nomeUsuario.length > 3 && (
         <div className="content">
           <Perfil nomeUsuario={nomeUsuario} />
           <ReposList nomeUsuario={nomeUsuario} />
