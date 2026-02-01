@@ -1,37 +1,30 @@
 import { useState } from "react";
+
 import Perfil from "./components/Perfil";
-import ReposList from "./components/Perfil/ReposList";
+import Formulario from "./components/Formulario";
+import ReposList from "./components/ReposList";
 
 function App() {
-  const [input, setInput] = useState("");
-  const [nomeUsuario, setNomeUsuario] = useState("");
+  const [nomeUsuario, setNomeUsuario] = useState('');
 
   return (
-    <div className="app">
-      <h1 className="title">GitHub Profile Finder</h1>
-      <p className="subtitle">
-        Digite um usuário do GitHub e veja os repositórios ✨
-      </p>
+    <div className="container">
+      <h1 className="titulo">GitHub</h1>
 
-      <div className="search">
-        <input
-          type="text"
-          placeholder="ex: iancaTino"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              setNomeUsuario(input.trim());
-            }
-          }}
-        />
-      </div>
+      <input
+        type="text"
+        placeholder="Digite o nome do usuário e pressione Enter"
+        onKeyDown={(e) => {
+          if (e.key === "Enter") setNomeUsuario(e.target.value);
+        }}
+        className="input"
+      />
 
-      {nomeUsuario.length > 3 && (
-        <div className="content">
+      {nomeUsuario.length > 4 && (
+        <>
           <Perfil nomeUsuario={nomeUsuario} />
           <ReposList nomeUsuario={nomeUsuario} />
-        </div>
+        </>
       )}
     </div>
   );
