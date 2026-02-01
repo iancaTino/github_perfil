@@ -10,7 +10,7 @@ const ReposList = ({ nomeUsuario }) => {
         if (!nomeUsuario) return;
 
         setEstaCarregando(true);
-        setErro(null); 
+        setErro(null);
 
         fetch(`https://api.github.com/users/${nomeUsuario}/repos`)
             .then((res) => {
