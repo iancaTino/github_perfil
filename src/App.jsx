@@ -15,7 +15,7 @@ function App() {
       <div className="search">
         <input
           type="text"
-          placeholder="ex: iancaTino"
+          placeholder="ex: IancaTino"
           value={nomeUsuario}
           onChange={(e) => setNomeUsuario(e.target.value.trim())}
         />

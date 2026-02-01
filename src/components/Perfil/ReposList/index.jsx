@@ -1,31 +1,33 @@
-import { useEffect, useState } from "react"
-
-import styles from './ReposList.module.css'
+import { useEffect, useState } from "react";
+import styles from "./ReposList.module.css";
 
 const ReposList = ({ nomeUsuario }) => {
     const [repos, setRepos] = useState([]);
     const [estaCarregando, setEstaCarregando] = useState(true);
     const [erro, setErro] = useState(null);
 
-
     useEffect(() => {
+        if (!nomeUsuario) return;
+
         setEstaCarregando(true);
+        setErro(null); 
+
         fetch(`https://api.github.com/users/${nomeUsuario}/repos`)
-            .then(res => {
+            .then((res) => {
                 if (!res.ok) {
                     throw new Error(res.statusText);
                 }
                 return res.json();
             })
-            .then(resJson => {
+            .then((resJson) => {
                 setTimeout(() => {
                     setEstaCarregando(false);
                     setRepos(resJson);
                 }, 3000);
             })
-            .catch(erro => {
+            .catch(() => {
                 setEstaCarregando(false);
-                setErro('Esse nome de perfil não existe');
+                setErro("Esse nome de perfil não existe");
             });
     }, [nomeUsuario]);
 
@@ -40,20 +42,25 @@ const ReposList = ({ nomeUsuario }) => {
                     {repos.map(({ id, name, language, html_url }) => (
                         <li className={styles.listItem} key={id}>
                             <div className={styles.itemName}>
-                                <b>Nome:</b>
-                                {name}
+                                <b>Nome:</b> {name}
                             </div>
                             <div className={styles.itemLanguage}>
-                                <b>Linguagem:</b>
-                                {language}
+                                <b>Linguagem:</b> {language}
                             </div>
-                            <a className={styles.itemLink} target="_blank" href={html_url}>Visitar no GitHub</a>
+                            <a
+                                className={styles.itemLink}
+                                target="_blank"
+                                rel="noreferrer"
+                                href={html_url}
+                            >
+                                Visitar no GitHub
+                            </a>
                         </li>
                     ))}
                 </ul>
             )}
         </div>
-    )
-}
+    );
+};
 
-export default ReposList
+export default ReposList;
