@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Perfil from "./components/Perfil";
-import ReposList from "./components/ReposList";
+import ReposList from "./components/Perfil/ReposList";
 
 function App() {
   const [nomeUsuario, setNomeUsuario] = useState('');
