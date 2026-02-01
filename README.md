@@ -21,7 +21,7 @@ Tudo isso em uma interface **clean**, **moderna*🌸
 ## 🖥️ Preview
 
 > 🔗 Acesse o projeto online  
-👉 **[Clique aqui para acessar]([COLOQUE_AQUI_SEU_LINK](https://github-perfil-icl.vercel.app/)**
+👉 **[Clique aqui para acessar](https://github-perfil-icl.vercel.app/)**
 
 ---
 
